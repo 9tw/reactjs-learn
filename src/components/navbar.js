@@ -1,15 +1,17 @@
-function Navbar() {
+function Navbar(props) {
     return (
-      <div>
+    <div style={{
+        backgroundColor:"grey"
+    }}>
         <ul>
             <li>
                 <a href="">Home</a>
             </li>
-            <li>
+            {/* <li>
                 <a href="">Contact</a>
-            </li>
+            </li> */}
             <li>
-                <a href="">About</a>
+                <a href="">{!props.newValue ? "About" : props.newValue}</a>
             </li>
         </ul>
       </div>
