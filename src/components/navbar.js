@@ -7,9 +7,9 @@ function Navbar(props) {
             <li>
                 <a href="/">Home</a>
             </li>
-            {/* <li>
-                <a href="">Contact</a>
-            </li> */}
+            <li>
+                <a href="/service">Services</a>
+            </li>
             <li>
                 <a href="/about">{!props.newValue ? "About" : props.newValue}</a>
             </li>
