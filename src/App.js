@@ -1,34 +1,18 @@
-import React, {useState} from 'react';
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 import './App.css';
-import Intro from './components/intro';
-import Navbar from './components/navbar';
-import Footer from './components/footer';
+import Home from './pages/Home';
+import About from './pages/About';
+import Notfound from './pages/Notfound';
 
 function App() {
-  const[getNavbarValue, setNavbarValue] = useState("");
-
-  const clicked = () => {
-    return alert("Button clicked!!")
-  }
-
-  const changeNavbar = () => {
-    setNavbarValue("Contact");
-  }
-
   return (
-    <div className="App">
-      {/* <header className="App-header">
-        <nav>TESTING</nav>
-      </header> */}
-      <Navbar newValue={getNavbarValue} />
-      <h1>HELLO, WORLD!!</h1>
-      <Intro 
-        name="Gerry" 
-        clicked={clicked} 
-      />
-      <button onClick={() => changeNavbar()}>Change Navbar</button>
-      <Footer />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="*" element={<Notfound />} />
+      </Routes>
+    </Router>
   );
 }
 

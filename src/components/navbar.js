@@ -5,13 +5,13 @@ function Navbar(props) {
     }}>
         <ul>
             <li>
-                <a href="">Home</a>
+                <a href="/">Home</a>
             </li>
             {/* <li>
                 <a href="">Contact</a>
             </li> */}
             <li>
-                <a href="">{!props.newValue ? "About" : props.newValue}</a>
+                <a href="/about">{!props.newValue ? "About" : props.newValue}</a>
             </li>
         </ul>
       </div>
