@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import '../App.css';
 import Intro from '../components/intro';
 import Navbar from '../components/navbar';
@@ -14,6 +14,10 @@ function Home() {
   const changeNavbar = () => {
     setNavbarValue("Contact");
   }
+
+  useEffect(() => {
+    alert('Wellcome to my Website.')
+  }, [])
 
   return (
     <div className="App">
